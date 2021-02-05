@@ -1,0 +1,102 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+
+  svg {
+    font: 10px sans-serif;
+    padding: 10px;
+  }
+
+  .frame {
+    stroke-width: 4px;
+    stroke: #aaa;
+    opacity: 0.8;
+  }
+
+  .frame:hover{
+    stroke: #000;
+    opacity: 1;
+  }
+
+  .extent {
+    fill: #000;
+    stroke: none;
+  }
+
+  .slope {
+    stroke: #000;
+    stroke-width: 5;
+  }
+
+  .tip {
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 3px;
+  }
+
+  .tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+  }
+
+  .container{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 10px;
+      padding: 10px;
+  }
+
+  .item{
+      text-align: center;
+      padding: 10px;
+  }
+
+  #splom {
+      grid-column: 1 / span 3;
+      gird-row: 1;
+  }
+
+  #legend{
+      grid-column: 1 / span 3;
+      gird-row: 2;
+  }
+
+  #button{
+      grid-column: 2;
+      grid-row:3;
+  }
+
+  .btn {
+      border: 5px solid #aaa;
+      background-color: white;
+      padding: 14px 28px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #000;
+      border-radius:30px;
+  }
+
+  .btn:hover {
+      background-color: #aaa;
+      color: white;
+  }
+
+
+</style>
+<body>
+<div class="container">
+    <div class="item" id="splom"></div>
+    <div class="item" id="legend"></div>
+    <div class="item" id="button"><button id="btn1" class="btn">Symmetrical Reordering</button></div>
+
+</div>
+
+<script src="d3.v5.js"></script>
+<script src="matrix.js"></script>
+<script src="d3-tip.js"></script>
+<script src="spearson.js"></script>
+
+<body>
